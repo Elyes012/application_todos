@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="TodoApp__form" data-reactid=".0.1">
+        <input class="TodoApp__form__input" placeholder="Add a todo..." [(ngModel)]="ajouTodo" data-reactid=".0.1.0"
+          [(ngModel)]="ajouTodo" (keyup.enter)="addTodo()">
+      </div>
+    </div>
+  </div>
+
+
+  <!--<button (click)="addTodo()">addtodo</button>-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="TodoApp__todo-list" data-reactid=".0.2">
+
+        <div class="TodoApp__todo" data-reactid=".0.2.0" *ngFor="let item of todo; let i = index">
+
+          <h4><strong>{{item.content}} : </strong></h4>
+          <h4> {{item.date | date: 'medium'}}</h4>
+
+          <div class="TodoApp__todo__primary" data-reactid=".0.2.0.0">
+            <div class="TodoApp__todo__label" data-reactid=".0.2.0.0.1">
+            </div>
+          </div>
+          <button class="material-icons TodoApp__todo__delete-btn" data-reactid=".0.2.0.1" (click)="deleteTodo(i)">Delete</button>
+          <button class="material-icons TodoApp__todo__delete-btn" data-reactid=".0.2.0.1" (click)="updateTodo(item, i)">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

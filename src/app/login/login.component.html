@@ -1,0 +1,65 @@
+<!--<form [formGroup]="formlogin">
+
+  <div class="form-group">
+    <label for="confpasswordInput">Mail</label>
+    <input formControlName="email" type="text" class="form-control" placeholder="Enter mail">
+  </div>
+
+  <div class="form-group">
+    <label for="Emailinput">password</label>
+    <input formControlName="password" type="text" class="form-control" placeholder="Enter password">
+  </div>
+
+
+  <span>
+    <h2 style="color:firebrick;"> {{message}}</h2>
+  </span>
+
+
+
+</form>
+
+
+
+<button type="submit" (click)="loginUser()">login</button> -->
+
+
+<body >
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://i.imgur.com/aSJ0pLd.jpg" id="icon" alt="User Icon" />
+      <h1>Todo Website</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form [formGroup]="formlogin">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Enter email" formControlName="email">
+      <input type="text" id="password" class="fadeIn third" name="login" placeholder="Enter password" formControlName="password">
+
+    </form>
+    <button type="button" class="btn btn-primary btnlogin" (click)="loginUser()">Login</button>
+
+    <!-- Remind Passowrd -->
+    <div class="formFooter">
+
+        <h2 style="color:firebrick;"> {{message}}</h2>
+
+    </div>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+</body>
+
+

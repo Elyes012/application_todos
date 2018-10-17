@@ -1,0 +1,54 @@
+
+
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="https://i.imgur.com/aSJ0pLd.jpg" id="icon" alt="User Icon" />
+        <h1>Todo Website</h1>
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="formregister">
+          <input formControlName="name" type="text" class="form-control"   placeholder="Enter firstname" >
+          <div class="validations" *ngIf="formregister.touched">
+              <span>
+                <i class="fa fa-check-circle" style="color:green;" *ngIf="formregister.controls.name.valid">Firstname Valid</i>
+                <i class="fa fa-times-circle" style="color:firebrick;"  *ngIf="formregister.controls.name.invalid">Firstname should be minimum 4 characters long.</i>
+
+              </span>
+          </div>
+
+          <input formControlName="lastname" type="text" class="form-control"   placeholder="Enter lastname" >
+          <div class="validations" *ngIf="formregister.touched">
+          <i class="fa fa-check-circle" style="color:green;"  *ngIf="formregister.controls.lastname.valid"> Lastname Valid</i>
+                <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="formregister.controls.lastname.invalid"> Lastname should be minimum 4 characters long.</i>
+                </div>
+
+
+
+          <input formControlName="email" type="text" class="form-control"  placeholder="Enter Email" >
+          <div class="validations" *ngIf="formregister.touched">
+          <i class="fa fa-check-circle" style="color:green;" *ngIf="formregister.controls.email.valid">Email Valid</i>
+          <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="formregister.controls.email.invalid"> Invalid Email</i>
+        </div>
+
+
+          <input formControlName="password" type="text" class="form-control"  placeholder="Enter password" >
+          <div class="validations" *ngIf="formregister.touched">
+          <i class="fa fa-check-circle" style="color:green;" *ngIf="formregister.controls.password.valid">password Valid</i>
+          <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="formregister.controls.password.invalid"> Password should be minimum 8 characters long</i>
+        </div>
+      </form>
+      <button type="button" class="btn btn-primary btnlogin" (click)="registerUser()">Register</button>
+
+      <!-- Remind Passowrd -->
+      <div class="formFooter">
+      </div>
+
+    </div>
+  </div>
+
+
