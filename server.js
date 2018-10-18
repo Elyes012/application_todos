@@ -22,6 +22,10 @@ app.use('/auth',auth);
 const todo = require('./Server/Routes/todo')
 app.use('/todo',todo);
 
+/*app.get('**',(req,res)=>{
+  res.sendFile(__dirname+"/Application-todo/index.html");
+})  ==> on l'ajout sur serveur pour pointer sur index.html*/
+
 
 app.listen(port, err=>{
     if (err) throw err;
