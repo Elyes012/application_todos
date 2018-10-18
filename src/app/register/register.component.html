@@ -36,7 +36,7 @@
         </div>
 
 
-          <input formControlName="password" type="text" class="form-control"  placeholder="Enter password" >
+          <input formControlName="password" type="password" class="form-control"  placeholder="Enter password" >
           <div class="validations" *ngIf="formregister.touched">
           <i class="fa fa-check-circle" style="color:green;" *ngIf="formregister.controls.password.valid">password Valid</i>
           <i class="fa fa-times-circle" style="color:firebrick;" *ngIf="formregister.controls.password.invalid"> Password should be minimum 8 characters long</i>
